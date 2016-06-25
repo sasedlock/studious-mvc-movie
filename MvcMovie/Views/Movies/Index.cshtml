@@ -12,7 +12,6 @@
 @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
 {
     <p>
-        <!-- The genre list needs to be a list of available movie genres-->
         Genre: @Html.DropDownList("movieGenre", "All")
         Title: @Html.TextBox("Name") <br/>
         <input type="submit" value="Filter"/>
