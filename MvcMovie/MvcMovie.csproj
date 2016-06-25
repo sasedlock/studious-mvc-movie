@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201606230028141_InitialCreate.Designer.cs">
       <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.cs" />
+    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.Designer.cs">
+      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -295,6 +299,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606230028141_InitialCreate.resx">
       <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606252247411_AddRatingColumnToMovieTable.resx">
+      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
