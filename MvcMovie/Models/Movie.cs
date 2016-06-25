@@ -21,8 +21,8 @@ namespace MvcMovie.Models
         [Range(1,100)]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
-        [RegularExpression(@"^[A-Z]+[a-zA-z13\-\s]*$")]
-        [StringLength(5)]
+        [RegularExpression(@"^[A-Z]+[a-zA-z13\-\s]*$", ErrorMessage = "Field must include alphabetical characters, with an optional '-13' where necessary")]
+        [StringLength(5,ErrorMessage = "The field cannot be greater than 5 characters in length")]
         public string Rating { get; set; }
     }
 }
