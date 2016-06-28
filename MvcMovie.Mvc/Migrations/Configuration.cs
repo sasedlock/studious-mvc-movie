@@ -1,3 +1,4 @@
+using MvcMovie.Domain.Models;
 using MvcMovie.Models;
 
 namespace MvcMovie.Migrations

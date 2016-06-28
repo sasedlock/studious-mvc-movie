@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using MvcMovie.Domain.Models;
 
 namespace MvcMovie.Models
 {
@@ -30,6 +31,6 @@ namespace MvcMovie.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<MvcMovie.Models.Movie> Movies { get; set; }
+        public System.Data.Entity.DbSet<Movie> Movies { get; set; }
     }
 }
