@@ -1,6 +1,8 @@
 # README #
 
-The purpose of this repository is to show what steps can be taken, after standing up a sample "Hello, World!" app, to implement established practices and design principles.
+The purpose of this repository is to show what steps can be taken, after standing up a sample "Hello, World!" app, to implement established practices and design principles. 
+
+Additional documentation/discussion can be found on this repository's [Wiki page](https://bitbucket.org/ssedlock/mvc-movie-refactor/wiki/)
 
 ### Who is this repository for? ###
 
