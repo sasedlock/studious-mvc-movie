@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MvcMovieDbContext.cs" />
+    <Compile Include="Dals\MovieDal.cs" />
     <Compile Include="Migrations\201606300034305_InitialMigration.cs" />
     <Compile Include="Migrations\201606300034305_InitialMigration.Designer.cs">
       <DependentUpon>201606300034305_InitialMigration.cs</DependentUpon>
@@ -72,6 +73,7 @@
       <DependentUpon>201606300034305_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

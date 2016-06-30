@@ -5,27 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MvcMovie.DataAccess.Context;
+using MvcMovie.DataAccess.Dals;
 using MvcMovie.Domain.Models;
 
 namespace MvcMovie.Service.Services
 {
     public class MovieService
     {
-        private MvcMovieDbContext db = new MvcMovieDbContext(); 
+        private MovieDal _dal = new MovieDal();
 
-        public IEnumerable<String> GetGenres()
+        public IEnumerable<string> GetGenres()
         {
-            var genres = from m in db.Movies
-                         orderby m.Genre
-                         select m.Genre;
-
-            return genres;
+            return _dal.GetGenres().AsEnumerable();
         }
 
         public IEnumerable<Movie> GetMovies(string movieGenre, string name)
         {
-            var movies = from m in db.Movies
-                         select m;
+            var movies = _dal.GetMovies(movieGenre, name);
 
             if (!string.IsNullOrEmpty(name))
             {
@@ -37,39 +33,27 @@ namespace MvcMovie.Service.Services
                 movies = movies.Where(m => m.Genre == movieGenre);
             }
 
-            return movies;
+            return movies.AsEnumerable();
         }
 
         public Movie GetMovieById(int id)
         {
-            return db.Movies.Find(id);
+            return _dal.GetMovieById(id);
         }
 
         public void AddMovie(Movie movie)
         {
-            db.Movies.Add(movie);
-            db.SaveChanges();
+            _dal.AddMovie(movie);
         }
 
         public void EditMovie(Movie movie)
         {
-            db.Entry(movie).State = EntityState.Modified;
-            db.SaveChanges();
+            _dal.EditMovie(movie);
         }
 
         public void DeleteMovie(int id)
         {
-            var movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
-            db.SaveChanges();
-        }
-
-        protected void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
+            _dal.DeleteMovie(id);
         }
     }
 }
