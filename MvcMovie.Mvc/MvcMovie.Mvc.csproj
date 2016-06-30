@@ -326,6 +326,10 @@
       <Project>{e9df71d0-e447-450f-a049-ea06d2bce4de}</Project>
       <Name>MvcMovie.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MvcMovie.Service\MvcMovie.Service.csproj">
+      <Project>{6F207E4B-8E8B-418B-AFC8-818D76B7022C}</Project>
+      <Name>MvcMovie.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
