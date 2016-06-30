@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201606252309009_AddingConstraintsToMovie.Designer.cs">
       <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606300025073_RemoveMovieFromContext.cs" />
+    <Compile Include="Migrations\201606300025073_RemoveMovieFromContext.Designer.cs">
+      <DependentUpon>201606300025073_RemoveMovieFromContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -308,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606252309009_AddingConstraintsToMovie.resx">
       <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606300025073_RemoveMovieFromContext.resx">
+      <DependentUpon>201606300025073_RemoveMovieFromContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
