@@ -318,6 +318,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MvcMovie.DataAccess\MvcMovie.DataAccess.csproj">
+      <Project>{2DF0A96A-006C-44B7-9589-ED9C6A4E8B47}</Project>
+      <Name>MvcMovie.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcMovie.Domain\MvcMovie.Domain.csproj">
       <Project>{e9df71d0-e447-450f-a049-ea06d2bce4de}</Project>
       <Name>MvcMovie.Domain</Name>

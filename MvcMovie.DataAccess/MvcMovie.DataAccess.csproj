@@ -50,13 +50,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MvcMovieDbContext.cs" />
+    <Compile Include="Migrations\201606300034305_InitialMigration.cs" />
+    <Compile Include="Migrations\201606300034305_InitialMigration.Designer.cs">
+      <DependentUpon>201606300034305_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MvcMovie.Domain\MvcMovie.Domain.csproj">
+      <Project>{E9DF71D0-E447-450F-A049-EA06D2BCE4DE}</Project>
+      <Name>MvcMovie.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606300034305_InitialMigration.resx">
+      <DependentUpon>201606300034305_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

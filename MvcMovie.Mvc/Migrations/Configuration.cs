@@ -15,7 +15,5 @@ namespace MvcMovie.Migrations
             AutomaticMigrationsEnabled = false;
             ContextKey = "MvcMovie.Models.ApplicationDbContext";
         }
-
-        
     }
 }
