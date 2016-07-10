@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using MvcMovie.DataAccess.Context;
 using MvcMovie.DataAccess.Dals;
 using MvcMovie.Domain.Models;
+using MvcMovie.Service.Interfaces;
 
 namespace MvcMovie.Service.Services
 {
-    public class MovieService
+    public class MovieService : IMovieService
     {
         private MovieDal _dal = new MovieDal();
 

@@ -9,13 +9,23 @@ using System.Web.Mvc;
 using MvcMovie.DataAccess.Context;
 using MvcMovie.Domain.Models;
 using MvcMovie.Models;
+using MvcMovie.Service.Interfaces;
 using MvcMovie.Service.Services;
 
 namespace MvcMovie.Controllers
 {
     public class MoviesController : Controller
     {
-        private MovieService _service = new MovieService();
+        private readonly IMovieService _service;
+
+        public MoviesController(IMovieService movieService)
+        {
+            if (movieService == null)
+            {
+                throw new ArgumentNullException(nameof(movieService));
+            }
+            _service = movieService;
+        }
 
         // GET: Movies
         public ActionResult Index(string movieGenre, string name)
