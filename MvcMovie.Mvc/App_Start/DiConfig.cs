@@ -4,6 +4,7 @@ using Autofac.Integration.Mvc;
 using MvcMovie.DataAccess.Context;
 using MvcMovie.DataAccess.Dals;
 using MvcMovie.DataAccess.Interfaces;
+using MvcMovie.Modules;
 using MvcMovie.Service.Interfaces;
 using MvcMovie.Service.Services;
 
@@ -16,9 +17,8 @@ namespace MvcMovie
             var builder = new ContainerBuilder();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterType<MovieService>().As<IMovieService>().InstancePerRequest();
-            builder.RegisterType<MovieDal>().As<IMovieDal>().InstancePerRequest();
-            builder.RegisterType<MvcMovieDbContext>().As<IMvcMovieDbContext>().InstancePerRequest();
+
+            builder.RegisterModule(new MovieModule());
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
