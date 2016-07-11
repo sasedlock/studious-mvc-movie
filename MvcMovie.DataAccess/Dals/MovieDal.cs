@@ -12,11 +12,21 @@ namespace MvcMovie.DataAccess.Dals
 {
     public class MovieDal : IMovieDal
     {
-        private MvcMovieDbContext db = new MvcMovieDbContext();
+        private readonly IMvcMovieDbContext _db;
+
+        public MovieDal(IMvcMovieDbContext dbContext)
+        {
+            if (dbContext == null)
+            {
+                throw new ArgumentNullException(nameof(dbContext));
+            }
+
+            _db = dbContext;
+        }
 
         public IQueryable<string> GetGenres()
         {
-            var genres = from m in db.Movies
+            var genres = from m in _db.Movies
                          orderby m.Genre
                          select m.Genre;
 
@@ -25,7 +35,7 @@ namespace MvcMovie.DataAccess.Dals
 
         public IQueryable<Movie> GetMovies(string movieGenre, string name)
         {
-            var movies = from m in db.Movies
+            var movies = from m in _db.Movies
                          select m;
 
             return movies;
@@ -33,33 +43,33 @@ namespace MvcMovie.DataAccess.Dals
 
         public Movie GetMovieById(int id)
         {
-            return db.Movies.Find(id);
+            return _db.Movies.Find(id);
         }
 
         public void AddMovie(Movie movie)
         {
-            db.Movies.Add(movie);
-            db.SaveChanges();
+            _db.Movies.Add(movie);
+            _db.SaveChanges();
         }
 
         public void EditMovie(Movie movie)
         {
-            db.Entry(movie).State = EntityState.Modified;
-            db.SaveChanges();
+            _db.Entry(movie).State = EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public void DeleteMovie(int id)
         {
-            var movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
-            db.SaveChanges();
+            var movie = _db.Movies.Find(id);
+            _db.Movies.Remove(movie);
+            _db.SaveChanges();
         }
 
         protected void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
         }
     }
