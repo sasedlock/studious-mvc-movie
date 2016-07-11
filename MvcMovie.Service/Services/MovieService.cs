@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MvcMovie.DataAccess.Context;
 using MvcMovie.DataAccess.Dals;
+using MvcMovie.DataAccess.Interfaces;
 using MvcMovie.Domain.Models;
 using MvcMovie.Service.Interfaces;
 
@@ -13,7 +14,17 @@ namespace MvcMovie.Service.Services
 {
     public class MovieService : IMovieService
     {
-        private MovieDal _dal = new MovieDal();
+        private readonly IMovieDal _dal;
+
+        public MovieService(IMovieDal movieDal)
+        {
+            if (movieDal == null)
+            {
+                throw new ArgumentNullException(nameof(movieDal));
+            }
+
+            _dal = movieDal;
+        }
 
         public IEnumerable<string> GetGenres()
         {

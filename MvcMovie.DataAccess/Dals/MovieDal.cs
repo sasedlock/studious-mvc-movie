@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MvcMovie.DataAccess.Context;
+using MvcMovie.DataAccess.Interfaces;
 using MvcMovie.Domain.Models;
 
 namespace MvcMovie.DataAccess.Dals
 {
-    public class MovieDal
+    public class MovieDal : IMovieDal
     {
         private MvcMovieDbContext db = new MvcMovieDbContext();
 

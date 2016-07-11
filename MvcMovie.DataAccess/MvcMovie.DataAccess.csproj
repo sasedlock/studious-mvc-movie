@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Context\MvcMovieDbContext.cs" />
     <Compile Include="Dals\MovieDal.cs" />
+    <Compile Include="Interfaces\IMovieDal.cs" />
     <Compile Include="Migrations\201606300034305_InitialMigration.cs" />
     <Compile Include="Migrations\201606300034305_InitialMigration.Designer.cs">
       <DependentUpon>201606300034305_InitialMigration.cs</DependentUpon>
