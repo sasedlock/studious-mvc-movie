@@ -5,7 +5,7 @@ using MvcMovie.Domain.Models;
 
 namespace MvcMovie.DataAccess.Interfaces
 {
-    public interface IMvcMovieDbContext : IDisposable
+    public interface IMvcMovieDbContext
     {
         DbSet<Movie> Movies { get; set; }
         DbEntityEntry Entry(Movie movie);
