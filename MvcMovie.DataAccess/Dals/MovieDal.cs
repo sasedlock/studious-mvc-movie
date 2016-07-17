@@ -33,7 +33,7 @@ namespace MvcMovie.DataAccess.Dals
             return genres.AsQueryable();
         }
 
-        public IQueryable<Movie> GetMovies(string movieGenre, string name)
+        public IQueryable<Movie> GetMovies()
         {
             var movies = from m in _db.Movies
                          select m;

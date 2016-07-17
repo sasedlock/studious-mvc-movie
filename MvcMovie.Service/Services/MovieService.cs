@@ -33,7 +33,7 @@ namespace MvcMovie.Service.Services
 
         public IEnumerable<Movie> GetMovies(string movieGenre, string name)
         {
-            var movies = _dal.GetMovies(movieGenre, name);
+            var movies = _dal.GetMovies();
 
             if (!string.IsNullOrEmpty(name))
             {
