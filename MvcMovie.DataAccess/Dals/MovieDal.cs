@@ -54,7 +54,7 @@ namespace MvcMovie.DataAccess.Dals
 
         public void EditMovie(Movie movie)
         {
-            _db.Entry(movie).State = EntityState.Modified;
+            _db.SetModified(movie);
             _db.SaveChanges();
         }
 

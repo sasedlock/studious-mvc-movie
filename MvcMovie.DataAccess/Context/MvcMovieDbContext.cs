@@ -22,6 +22,11 @@ namespace MvcMovie.DataAccess.Context
             return base.Entry(movie);
         }
 
+        public void SetModified(Movie movie)
+        {
+            Entry(movie).State = EntityState.Modified;
+        }
+
         public void SaveChanges()
         {
             base.SaveChanges();

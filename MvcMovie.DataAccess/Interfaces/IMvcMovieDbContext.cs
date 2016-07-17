@@ -9,6 +9,7 @@ namespace MvcMovie.DataAccess.Interfaces
     {
         DbSet<Movie> Movies { get; set; }
         DbEntityEntry Entry(Movie movie);
+        void SetModified(Movie movie);
         void SaveChanges();
     }
 }
