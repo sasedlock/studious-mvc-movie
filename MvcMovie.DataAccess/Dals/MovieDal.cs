@@ -64,13 +64,5 @@ namespace MvcMovie.DataAccess.Dals
             _db.Movies.Remove(movie);
             _db.SaveChanges();
         }
-
-        protected void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                _db.Dispose();
-            }
-        }
     }
 }
