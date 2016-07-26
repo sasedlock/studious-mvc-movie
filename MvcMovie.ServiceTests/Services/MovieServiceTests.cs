@@ -99,6 +99,7 @@ namespace MvcMovie.ServiceTests.Services
         }
 
         [TestMethod]
+        [Ignore]
         public void AddingMovie_ExistingName_ReturnsAppropriateError()
         {
             // ARRANGE
