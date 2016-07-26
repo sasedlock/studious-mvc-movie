@@ -64,6 +64,20 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcMovie.DataAccess\MvcMovie.DataAccess.csproj">
+      <Project>{2DF0A96A-006C-44B7-9589-ED9C6A4E8B47}</Project>
+      <Name>MvcMovie.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcMovie.Domain\MvcMovie.Domain.csproj">
+      <Project>{E9DF71D0-E447-450F-A049-EA06D2BCE4DE}</Project>
+      <Name>MvcMovie.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcMovie.Service\MvcMovie.Service.csproj">
+      <Project>{6F207E4B-8E8B-418B-AFC8-818D76B7022C}</Project>
+      <Name>MvcMovie.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
