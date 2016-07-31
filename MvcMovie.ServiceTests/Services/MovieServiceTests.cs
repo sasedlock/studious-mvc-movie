@@ -97,18 +97,7 @@ namespace MvcMovie.ServiceTests.Services
             CollectionAssert.IsSubsetOf(result.ToList(), _movies);
             Assert.AreEqual(_movies.Count(m => m.Title.Contains(movieName)), result.Count());
         }
-
-        [TestMethod]
-        [Ignore]
-        public void AddingMovie_ExistingName_ReturnsAppropriateError()
-        {
-            // ARRANGE
-
-            // ACT
-
-            // ASSERT
-        }
-
+        
         [TestMethod]
         [Ignore]
         public void TestTemplate()
