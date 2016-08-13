@@ -9,8 +9,8 @@ namespace MvcMovie.DataAccess.Interfaces
 {
     public interface IMovieDal
     {
-        IQueryable<string> GetGenres();
-        IQueryable<Movie> GetMovies();
+        IEnumerable<string> GetGenres();
+        IEnumerable<Movie> GetMovies();
         Movie GetMovieById(int id);
         void AddMovie(Movie movie);
         void EditMovie(Movie movie);

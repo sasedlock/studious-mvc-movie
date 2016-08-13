@@ -24,21 +24,21 @@ namespace MvcMovie.DataAccess.Dals
             _db = dbContext;
         }
 
-        public IQueryable<string> GetGenres()
+        public IEnumerable<string> GetGenres()
         {
             var genres = from m in _db.Movies
                          orderby m.Genre
                          select m.Genre;
 
-            return genres.AsQueryable();
+            return genres.AsEnumerable();
         }
 
-        public IQueryable<Movie> GetMovies()
+        public IEnumerable<Movie> GetMovies()
         {
             var movies = from m in _db.Movies
                          select m;
 
-            return movies;
+            return movies.AsEnumerable();
         }
 
         public Movie GetMovieById(int id)
