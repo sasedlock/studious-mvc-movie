@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie.ServiceTests", "Mv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie.MvcTests", "MvcMovie.MvcTests\MvcMovie.MvcTests.csproj", "{EF97EE8D-1B24-4BEB-81AD-F788C19D8B06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie.IntegrationTests", "MvcMovie.IntegrationTests\MvcMovie.IntegrationTests.csproj", "{FC89BAA1-EEA9-494A-9546-D639B9B00C8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EF97EE8D-1B24-4BEB-81AD-F788C19D8B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF97EE8D-1B24-4BEB-81AD-F788C19D8B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF97EE8D-1B24-4BEB-81AD-F788C19D8B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC89BAA1-EEA9-494A-9546-D639B9B00C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC89BAA1-EEA9-494A-9546-D639B9B00C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC89BAA1-EEA9-494A-9546-D639B9B00C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC89BAA1-EEA9-494A-9546-D639B9B00C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
