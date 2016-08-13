@@ -12,7 +12,7 @@ namespace MvcMovie.DataAccess.Context
 {
     public class MvcMovieDbContext : DbContext, IMvcMovieDbContext
     {
-        public MvcMovieDbContext() : base("MvcMovie")
+        public MvcMovieDbContext(string connectionStringName) : base(connectionStringName)
         {
         }
 

@@ -17,7 +17,7 @@ namespace MvcMovie.Modules
         {
             builder.RegisterType<MovieService>().As<IMovieService>().InstancePerRequest();
             builder.RegisterType<MovieDal>().As<IMovieDal>().InstancePerRequest();
-            builder.RegisterType<MvcMovieDbContext>().As<IMvcMovieDbContext>().InstancePerRequest();
+            builder.RegisterType<MvcMovieDbContext>().As<IMvcMovieDbContext>().WithParameter("connectionStringName", "MvcMovie").InstancePerRequest();
         }
     }
 }
