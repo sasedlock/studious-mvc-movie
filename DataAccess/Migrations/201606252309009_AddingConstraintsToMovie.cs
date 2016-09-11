@@ -1,8 +1,7 @@
-namespace MvcMovie.Migrations
+using System.Data.Entity.Migrations;
+
+namespace DataAccess.Migrations
 {
-    using System;
-    using System.Data.Entity.Migrations;
-    
     public partial class AddingConstraintsToMovie : DbMigration
     {
         public override void Up()

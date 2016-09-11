@@ -1,21 +1,18 @@
-using MvcMovie.Models;
+using System;
+using System.Data.Entity.Migrations;
+using Domain;
 
-namespace MvcMovie.Migrations
+namespace DataAccess.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<MvcMovie.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.MovieContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MvcMovie.Models.ApplicationDbContext";
+            ContextKey = "DataAccess.MovieContext";
         }
 
-        protected override void Seed(MvcMovie.Models.ApplicationDbContext context)
+        protected override void Seed(MovieContext context)
         {
             context.Movies.AddOrUpdate(i => i.Title,
                 new Movie
