@@ -19,7 +19,7 @@ namespace MvcMovie.Controllers
         // GET: Movies
         public ActionResult Index(string movieGenre, string name)
         {
-            ViewBag.movieGenre = _service.GetGenres();
+            ViewBag.movieGenre = new SelectList(_service.GetGenres()); 
             return View(_service.GetMoviesByNameAndGenre(name, movieGenre));
         }
 

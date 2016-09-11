@@ -203,19 +203,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606230028141_InitialCreate.cs" />
-    <Compile Include="Migrations\201606230028141_InitialCreate.Designer.cs">
-      <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.cs" />
-    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.Designer.cs">
-      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606252309009_AddingConstraintsToMovie.cs" />
-    <Compile Include="Migrations\201606252309009_AddingConstraintsToMovie.Designer.cs">
-      <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -295,17 +282,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606230028141_InitialCreate.resx">
-      <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606252247411_AddRatingColumnToMovieTable.resx">
-      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606252309009_AddingConstraintsToMovie.resx">
-      <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">

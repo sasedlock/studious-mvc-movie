@@ -49,6 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201606230028141_InitialCreate.cs" />
+    <Compile Include="Migrations\201606230028141_InitialCreate.Designer.cs">
+      <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.cs" />
+    <Compile Include="Migrations\201606252247411_AddRatingColumnToMovieTable.Designer.cs">
+      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606252309009_AddingConstraintsToMovie.cs" />
+    <Compile Include="Migrations\201606252309009_AddingConstraintsToMovie.Designer.cs">
+      <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609112124283_AspNetUsersAndRoles.cs" />
+    <Compile Include="Migrations\201609112124283_AspNetUsersAndRoles.Designer.cs">
+      <DependentUpon>201609112124283_AspNetUsersAndRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MovieContext.cs" />
     <Compile Include="MovieDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +79,20 @@
       <Project>{2058b3e2-2877-4ead-905d-8c5775a00644}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606230028141_InitialCreate.resx">
+      <DependentUpon>201606230028141_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606252247411_AddRatingColumnToMovieTable.resx">
+      <DependentUpon>201606252247411_AddRatingColumnToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606252309009_AddingConstraintsToMovie.resx">
+      <DependentUpon>201606252309009_AddingConstraintsToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609112124283_AspNetUsersAndRoles.resx">
+      <DependentUpon>201609112124283_AspNetUsersAndRoles.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

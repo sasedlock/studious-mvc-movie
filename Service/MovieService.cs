@@ -14,12 +14,12 @@ namespace Service
 
         #region Queries
 
-        public List<Movie> GetMovies()
+        public IEnumerable<Movie> GetMovies()
         {
             return _dal.GetMovies().ToList();
         }
 
-        public List<string> GetGenres()
+        public IEnumerable<string> GetGenres()
         {
             return _dal.GetGenres().ToList();
         }
@@ -29,7 +29,7 @@ namespace Service
             return _dal.GetMovieById(id);
         }
 
-        public List<Movie> GetMoviesByNameAndGenre(string name, string genre)
+        public IEnumerable<Movie> GetMoviesByNameAndGenre(string name, string genre)
         {
             var movies = _dal.GetMovies();
 
